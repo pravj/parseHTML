@@ -19,6 +19,55 @@
 			start = end+1
 		return self.Value
 		
+	def key_value(self, tag):
+		self.keyValue = []
+		count = self.toParse.count('</'+tag+'>')
+		for i in range(0,count):
+			toScan = self.insideValue(tag)[i]
+			print toScan
+			j = len(tag)
+			length = len(toScan)
+			while j<length:
+			
+				x = j
+				
+				token = True
+				while token:
+					if toScan[x]==(" "):
+						x = x+1
+					else:
+						token = False
+					
+				y = x
+			
+				gate = True
+				while gate:
+					if toScan[y].isalpha():
+						y = y+1
+					else:
+						gate = False
+					
+				key = toScan[x:y]
+				#print key
+				
+				equal = toScan.find('=',y)
+				z = equal+1
+			
+				next = True
+				while next:
+					if toScan[z]==(" "):
+						z = z+1
+					else:
+						next = False
+					
+				holder = toScan[z]
+				closer = toScan.find(holder,z+1)
+			
+				value  = toScan[z+1:closer]
+				#print value
+				
+				j = closer+1
+		
 	def tag_Data(self, tag):
 		self.Data = []
 		count = self.toParse.count('</'+tag+'>')
