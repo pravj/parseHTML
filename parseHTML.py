@@ -1,5 +1,5 @@
-class parseHTML:
-  def __init__(self, input):
+    class parseHTML:
+  	def __init__(self, input):
 		self.toParse = input
 	
 	def count(self, tag):
