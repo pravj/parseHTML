@@ -24,7 +24,7 @@
 		count = self.toParse.count('</'+tag+'>')
 		for i in range(0,count):
 			toScan = self.insideValue(tag)[i]
-			print toScan
+			#print toScan
 			j = len(tag)
 			length = len(toScan)
 			while j<length:
@@ -65,8 +65,15 @@
 			
 				value  = toScan[z+1:closer]
 				#print value
+				toAdd = key+", "+value
+				self.keyValue.append(toAdd)
 				
 				j = closer+1
+				
+			# returns the key-value array after searching all available pairs
+			if i==(count-1):
+				return self.keyValue
+				
 		
 	def tag_Data(self, tag):
 		self.Data = []
