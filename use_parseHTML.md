@@ -32,3 +32,6 @@
 
   &nbsp; &nbsp; <code>return <b>string</b> containing <b>Attribute(<i>attr</i>)</b>'s {<b>key, value</b>} for all tags(<b>tag</b>)</code><br>
   
+> <b>parse.key_value(<i>tag</i>)</b>
+
+  &nbsp; &nbsp; <code>returns <b>array</b> of all key-value pairs(<b>Attributes</b>) for tag(<b>tag</b>)</code>
